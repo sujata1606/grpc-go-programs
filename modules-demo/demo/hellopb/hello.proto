@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+option go_package = "pelligent.in/hellopb";
+
+package hellopb;
+
+message GreetRequest{
+    string name = 1;
+}
+
+message GreetResponse{
+    string greeting = 1;
+}
+
+service GreeterService {
+    rpc Greet(GreetRequest) returns (GreetResponse){}
+}
