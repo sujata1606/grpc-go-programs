@@ -1,0 +1,8 @@
+1. Do `go mod init <domainurl/currenturl>`from project root.
+2. Go into pb directory, run `go mod init <domainurl>/folder_path_till_here`
+3. go back to project root and run generate.bat file to genrate the pbs.
+4. go back into pb directory and run `go mod tidy`. It will fetch all the dependencies of all the files in that folder.
+5. edit go.mod file of project root. Add the following - 
+    `require <pb_module_name> v0.0.0
+     replace <pb_module_name>> => <pb_directory_path_from_project_root>`
+6. run `go mod tidy` from project root.
